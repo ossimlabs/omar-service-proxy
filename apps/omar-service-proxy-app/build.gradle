@@ -33,6 +33,7 @@ group "io.ossim.omar.apps"
 
 repositories {
   mavenLocal()
+  maven { url "${ossimMavenProxy}" }
   maven { url "https://repo.grails.org/grails/core" }
 }
 
