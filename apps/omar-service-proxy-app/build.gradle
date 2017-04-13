@@ -9,18 +9,13 @@ buildscript {
   }
   repositories {
     mavenLocal()
-    maven { url "${ossimMavenProxy}" }
     maven { url "https://repo.grails.org/grails/core" }
   }
   dependencies {
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
-    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.8.2"
+    classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.11.6"
     classpath "org.grails.plugins:hibernate5:6.0.4"
   }
-}
-
-plugins {
-    id "com.github.ben-manes.versions" version "0.13.0"
 }
 
 apply plugin:"eclipse"
@@ -42,7 +37,6 @@ ext {
 
 repositories {
   mavenLocal()
-  maven { url "${ossimMavenProxy}" }
   maven { url "https://repo.grails.org/grails/core" }
 }
 
@@ -74,7 +68,7 @@ dependencies {
   compile "org.hibernate:hibernate-ehcache:5.1.2.Final"
   console "org.grails:grails-console"
   profile "org.grails.profiles:web"
-  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.8.2"
+  runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.11.6"
   runtime "com.h2database:h2"
   testCompile "org.grails:grails-plugin-testing"
   testCompile "org.grails.plugins:geb"
